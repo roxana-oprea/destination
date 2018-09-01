@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import PropTypes from "prop-type";
+import PropTypes from "prop-types";
 
 
 class DestinationItem extends Component {

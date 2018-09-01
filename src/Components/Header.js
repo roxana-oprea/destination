@@ -22,7 +22,7 @@ class HeaderItem extends Component {
     return (
       <div className="wrapper">
         <Nav className="flex-nav">
-          <img src={logo} className="logo-image"/>
+          <img src={logo} className="logo-image" alt="Logo"/>
           <NavItem>
             <NavLink active href="#">Home</NavLink>
           </NavItem>

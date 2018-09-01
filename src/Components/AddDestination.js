@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import uuid from 'uuid';
-import PropTypes from 'prop-type';
+import PropTypes from 'prop-types';
 import {Container, Row, Col, Form, FormGroup, Label, Button} from 'reactstrap';
 
 

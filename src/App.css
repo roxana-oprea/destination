@@ -92,8 +92,6 @@ hr {
   background-color: #ff2457;
   right: 130px;
   top: 70px;
-  /*font-size: 24px;*/
-  /*padding: 12px;*/
 }
 
 .sign-in-button:hover,
@@ -110,4 +108,85 @@ hr {
   position: absolute;
   left: 45px;
   top: 45px;
+}
+
+@media all and (max-width: 1200px) {
+
+  .sign-in-button {
+    right: 50px;
+  }
+
+  .logo-image {
+    left: -20px
+  }
+}
+
+@media all and (max-width: 992px) {
+
+  .sign-in-button {
+    top: 222px;
+    right: 240px;
+  }
+
+  .logo-image {
+    left: 176px;
+    top: 200px;
+  }
+}
+
+@media all and (max-width: 768px) {
+
+  .sign-in-button {
+    top: 222px;
+    right: 185px;
+  }
+
+  .logo-image {
+    left: 126px;
+    top: 200px;
+  }
+}
+
+@media all and (max-width: 576px) {
+
+  .sign-in-button {
+    top: 222px;
+    right: 132px;
+  }
+
+  .logo-image {
+    left: 75px;
+    top: 200px;
+  }
+}
+
+@media all and (max-width: 576px) {
+
+  .sign-in-button {
+    top: 222px;
+    right: 132px;
+  }
+
+  .logo-image {
+    left: 75px;
+    top: 200px;
+  }
+}
+
+@media all and  (max-width: 575px) {
+
+  .nav {
+    margin-top: 50px;
+  }
+
+  .sign-in-button {
+    top: 411px;
+    right: 117px;
+  }
+
+  .logo-image {
+    left: 60px;
+    top: 10px;
+  }
+
 }

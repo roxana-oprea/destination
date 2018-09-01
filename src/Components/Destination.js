@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import DestinationItem from './DestinationItem';
-import PropTypes from 'prop-type';
+import PropTypes from 'prop-types';
+
 import {Container, Row, Col, Table} from 'reactstrap';
 
 
