@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import HeaderItem from './Components/Header';
 import CarouselEx from './Components/Carousel';
-import Projects from './Components/Projects';
-import AddProject from './Components/AddProject';
+import Destination from './Components/Destination';
+import AddDestination from './Components/AddDestination';
 import uuid from 'uuid';
 import {
   Container,
@@ -67,8 +67,8 @@ class App extends Component {
         <CarouselEx/>
         <Row>
           <Col>
-            <AddProject addProject={this.handleAddProject.bind(this)}/>
-            <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)}/>
+            <AddDestination addDestination={this.handleAddProject.bind(this)}/>
+            <Destination destinations={this.state.projects} onDelete={this.handleDeleteProject.bind(this)}/>
           </Col>
         </Row>
       </React.Fragment>

@@ -4,7 +4,7 @@ import PropTypes from 'prop-type';
 import {Container, Row, Col, Form, FormGroup, Label, Button} from 'reactstrap';
 
 
-class AddProject extends Component {
+class AddDestination extends Component {
   static defaultProps = {
     categories: ['Asia', 'Middle East', 'Europe']
   };
@@ -12,9 +12,9 @@ class AddProject extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     if (this.refs.title.value === '') {
-      alert('Title is required')
+      alert('Country is required')
     } else {
-      this.props.addProject({
+      this.props.addDestination({
         id: uuid.v4(),
         title: this.refs.title.value,
         category: this.refs.category.value
@@ -61,11 +61,11 @@ class AddProject extends Component {
   }
 }
 
-AddProject.propTypes =
+AddDestination.propTypes =
   {
     categories: PropTypes.array,
-    addProject: PropTypes.func
+    addDestination: PropTypes.func
   };
 
 
-export default AddProject;
+export default AddDestination;

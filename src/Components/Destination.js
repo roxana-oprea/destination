@@ -1,20 +1,20 @@
 import React, {Component} from 'react';
-import ProjectItem from './ProjectItem';
+import DestinationItem from './DestinationItem';
 import PropTypes from 'prop-type';
 import {Container, Row, Col, Table} from 'reactstrap';
 
 
-class Projects extends Component {
-  deleteProject(id) {
+class Destination extends Component {
+  deleteDestination(id) {
     this.props.onDelete(id);
   };
 
   render() {
-    let projectItems;
-    if (this.props.projects) {
-      projectItems = this.props.projects.map(project => {
+    let destinationItems;
+    if (this.props.destinations) {
+      destinationItems = this.props.destinations.map(destination => {
         return (
-          <ProjectItem onDelete={this.deleteProject.bind(this)} key={project.id} project={project}/>
+          <DestinationItem onDelete={this.deleteDestination.bind(this)} key={destination.id} destination={destination}/>
         )
       })
     }
@@ -35,7 +35,7 @@ class Projects extends Component {
                 </tr>
                 </thead>
                 <tbody>
-                {projectItems}
+                {destinationItems}
                 </tbody>
               </Table>
             </Col>
@@ -48,10 +48,10 @@ class Projects extends Component {
   }
 }
 
-Projects.propTypes =
+Destination.propTypes =
   {
-    projects: PropTypes.array,
+    destinations: PropTypes.array,
     onDelete: PropTypes.func
   };
 
-export default Projects;
+export default Destination;
