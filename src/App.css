@@ -180,12 +180,64 @@ hr {
   }
 
   .sign-in-button {
-    top: 411px;
-    right: 117px;
+    top: 335px;
+    right: 247px;
   }
 
   .logo-image {
-    left: 60px;
+    left: 185px;
+    top: 10px;
+  }
+}
+
+/* ============iphone==============*/
+@media all and  (min-width: 375px) {
+
+  .nav {
+    margin-top: 50px;
+  }
+
+  .sign-in-button {
+    top: 335px;
+    right: 148px;
+  }
+
+  .logo-image {
+    left: 91px;
+    top: 10px;
+  }
+}
+
+@media all and  (min-width: 360px) {
+
+  .nav {
+    margin-top: 50px;
+  }
+
+  .sign-in-button {
+    top: 335px;
+    right: 142px;
+  }
+
+  .logo-image {
+    left: 85px;
+    top: 10px;
+  }
+}
+
+@media all and  (min-width: 414px) {
+
+  .nav {
+    margin-top: 50px;
+  }
+
+  .sign-in-button {
+    top: 335px;
+    right: 164px;
+  }
+
+  .logo-image {
+    left: 101px;
     top: 10px;
   }
 
