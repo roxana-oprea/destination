@@ -4,6 +4,10 @@
   overflow: hidden;
 }
 
+hr {
+  border-top: 1px solid white;
+}
+
 .nav {
   font-size: 24px;
 }
@@ -79,10 +83,6 @@
   background-color: #ff2457;
 }
 
-hr {
-  border-top: 1px solid white;
-}
-
 .btn-secondary {
   border-color: #ff2457;
 }
@@ -110,135 +110,50 @@ hr {
   top: 45px;
 }
 
-@media all and (max-width: 1200px) {
+@media all and (min-width: 1200px) {
 
   .sign-in-button {
-    right: 50px;
+    position: absolute;
+    right: 38px;
+    top: 70px;
   }
 
   .logo-image {
-    left: -20px
+    position: absolute;
+    left: -24px;
+    top: 45px;
   }
 }
 
-@media all and (max-width: 992px) {
+@media all and (max-width: 1199.98px) {
 
   .sign-in-button {
-    top: 222px;
-    right: 240px;
+    position: static;
+    margin: 16px auto;
+    display: block;
   }
 
   .logo-image {
-    left: 176px;
-    top: 200px;
-  }
-}
-
-@media all and (max-width: 768px) {
-
-  .sign-in-button {
-    top: 222px;
-    right: 185px;
-  }
-
-  .logo-image {
-    left: 126px;
-    top: 200px;
-  }
-}
-
-@media all and (max-width: 576px) {
-
-  .sign-in-button {
-    top: 222px;
-    right: 132px;
-  }
-
-  .logo-image {
-    left: 75px;
-    top: 200px;
-  }
-}
-
-@media all and (max-width: 576px) {
-
-  .sign-in-button {
-    top: 222px;
-    right: 132px;
-  }
-
-  .logo-image {
-    left: 75px;
-    top: 200px;
+    position: static;
+    margin: 0 auto 16px;
+    display: block;
   }
 }
 
 @media all and  (max-width: 575px) {
+  .wrapper {
+    padding-left: 16px;
+    padding-right: 16px;
+  }
 
   .nav {
     margin-top: 50px;
+    flex-direction: column;
   }
 
   .sign-in-button {
-    top: 335px;
-    right: 247px;
+    display: block;
+    width: 100%;
+    margin-top: 16px;
   }
-
-  .logo-image {
-    left: 185px;
-    top: 10px;
-  }
-}
-
-/* ============iphone==============*/
-@media all and  (min-width: 375px) {
-
-  .nav {
-    margin-top: 50px;
-  }
-
-  .sign-in-button {
-    top: 335px;
-    right: 148px;
-  }
-
-  .logo-image {
-    left: 91px;
-    top: 10px;
-  }
-}
-
-@media all and  (min-width: 360px) {
-
-  .nav {
-    margin-top: 50px;
-  }
-
-  .sign-in-button {
-    top: 335px;
-    right: 142px;
-  }
-
-  .logo-image {
-    left: 85px;
-    top: 10px;
-  }
-}
-
-@media all and  (min-width: 414px) {
-
-  .nav {
-    margin-top: 50px;
-  }
-
-  .sign-in-button {
-    top: 335px;
-    right: 164px;
-  }
-
-  .logo-image {
-    left: 101px;
-    top: 10px;
-  }
-
 }

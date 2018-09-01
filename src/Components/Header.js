@@ -21,8 +21,8 @@ class HeaderItem extends Component {
   render() {
     return (
       <div className="wrapper">
+        <img src={logo} className="logo-image" alt="Logo"/>
         <Nav className="flex-nav">
-          <img src={logo} className="logo-image" alt="Logo"/>
           <NavItem>
             <NavLink active href="#">Home</NavLink>
           </NavItem>
@@ -38,8 +38,11 @@ class HeaderItem extends Component {
           <NavItem>
             <NavLink href="#">Events</NavLink>
           </NavItem>
-          <Button className="sign-in-button">Sign In</Button>
+          <NavItem className="d-none d-xl-none">
+            <NavLink href="#">Events</NavLink>
+          </NavItem>
         </Nav>
+        <Button className="sign-in-button">Sign In</Button>
       </div>
     );
   }
