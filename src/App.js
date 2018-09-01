@@ -1,19 +1,77 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
+import React, {Component} from 'react';
+import HeaderItem from './Components/Header';
+import CarouselEx from './Components/Carousel';
+import Projects from './Components/Projects';
+import AddProject from './Components/AddProject';
+import uuid from 'uuid';
+import {
+  Container,
+  Row,
+  Col
+} from 'reactstrap';
 import './App.css';
 
 class App extends Component {
+  constructor() {
+    super();
+    this.state = {
+      projects: []
+    }
+  }
+
+
+  componentWillMount() {
+    this.setState({
+      projects: [
+        {
+          id: uuid.v4(),
+          title: 'Indonesia',
+          category: 'Asia'
+        },
+        {
+          id: uuid.v4(),
+          title: 'Iran',
+          category: 'Middle East'
+        },
+        {
+          id: uuid.v4(),
+          title: 'Spain',
+          category: 'Europe'
+        },
+      ]
+
+    })
+  }
+
+  handleAddProject(project) {
+    //console.log(project);
+    let projects = [project].concat(this.state.projects);
+    this.setState({projects});
+  };
+
+  handleDeleteProject(id) {
+    this.setState({
+      projects: this.state.projects.filter(item => item.id !== id)
+    });
+  };
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <React.Fragment>
+        <Container fluid>
+          <Row>
+            <Col>
+              <HeaderItem/>
+            </Col>
+          </Row>
+        </Container>
+        <CarouselEx/>
+        <Row>
+          <Col>
+            <AddProject addProject={this.handleAddProject.bind(this)}/>
+            <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)}/>
+          </Col>
+        </Row>
+      </React.Fragment>
     );
   }
 }

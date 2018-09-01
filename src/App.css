@@ -1,28 +1,113 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
-}
-
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
+#root {
+  background-color: #272f44;
   color: white;
+  overflow: hidden;
 }
 
-.App-title {
-  font-size: 1.5em;
+.nav {
+  font-size: 24px;
 }
 
-.App-intro {
-  font-size: large;
+.nav-link {
+  color: white;
+  background-color: rgba(0, 0, 0, 0.2);
+  font-weight: 100;
+  letter-spacing: 2px;
+  text-decoration: none;
+  padding: 20px 5px;
+  display: inline-block;
+  text-align: center;
+  width: 100%;
+  transition: all 0.5s;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.wrapper {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 50px;
+}
+
+.flex-nav .nav {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.flex-nav li {
+  flex: 3;
+}
+
+.flex-nav li a.active {
+  border-bottom: 1px solid #ff2457;
+}
+
+.flex-nav .social {
+  flex: 1;
+}
+
+.nav-link:hover {
+  color: #ff2457;
+}
+
+@media all and (max-width: 1000px) {
+  .flex-nav ul {
+    flex-wrap: wrap;
+  }
+
+  .flex-nav li {
+    flex: 1 1 50%;
+  }
+
+  .flex-nav .social {
+    flex: 1 1 25%;
+  }
+}
+
+.submit-button {
+  color: white;
+  background: #ff2457;
+}
+
+.submit-button:hover,
+.submit-button:active,
+.submit-button:focus {
+  background-color: #b3163a;
+}
+
+.btn.btn-secondary.submit-button:active {
+  background-color: #ff2457;
+}
+
+hr {
+  border-top: 1px solid white;
+}
+
+.btn-secondary {
+  border-color: #ff2457;
+}
+
+.sign-in-button {
+  position: absolute;
+  background-color: #ff2457;
+  right: 130px;
+  top: 70px;
+  /*font-size: 24px;*/
+  /*padding: 12px;*/
+}
+
+.sign-in-button:hover,
+.sign-in-button:active,
+.sign-in-button:focus {
+  background-color: #b3163a;
+}
+
+.btn.btn-secondary.sign-in-button:active {
+  background-color: #ff2457;
+}
+
+.logo-image {
+  position: absolute;
+  left: 130px;
+  top: 45px;
 }
