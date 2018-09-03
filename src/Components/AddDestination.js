@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
+import {Container, Row, Col, Form, FormGroup, Label, Button} from 'reactstrap';
 import uuid from 'uuid';
 import PropTypes from 'prop-types';
-import {Container, Row, Col, Form, FormGroup, Label, Button} from 'reactstrap';
 
 
 class AddDestination extends Component {
@@ -9,10 +9,15 @@ class AddDestination extends Component {
     categories: ['Asia', 'Middle East', 'Europe']
   };
 
+  static propTypes = {
+    categories: PropTypes.array,
+    addDestination: PropTypes.func
+  };
+
   handleSubmit = (e) => {
     e.preventDefault();
     if (this.refs.title.value === '') {
-      alert('Country is required')
+      alert('Country is required');
     } else {
       this.props.addDestination({
         id: uuid.v4(),
@@ -24,7 +29,7 @@ class AddDestination extends Component {
   };
 
   render() {
-    let categoryOptions = this.props.categories.map(category => {
+    const categoryOptions = this.props.categories.map(category => {
       return <option key={category} value={category}>{category}</option>
     });
     return (
@@ -60,12 +65,5 @@ class AddDestination extends Component {
     );
   }
 }
-
-AddDestination.propTypes =
-  {
-    categories: PropTypes.array,
-    addDestination: PropTypes.func
-  };
-
 
 export default AddDestination;

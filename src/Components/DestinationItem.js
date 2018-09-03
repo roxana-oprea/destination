@@ -3,6 +3,11 @@ import PropTypes from "prop-types";
 
 
 class DestinationItem extends Component {
+  static propTypes = {
+    destination: PropTypes.object,
+    onDelete: PropTypes.func
+  };
+
   deleteDestination(id) {
     this.props.onDelete(id);
   };
@@ -16,7 +21,7 @@ class DestinationItem extends Component {
         <td>{this.props.destination.category}</td>
         <td>
           <button className="btn btn-sm submit-button"
-                  onClick={this.deleteDestination.bind(this, this.props.destination.id)}>
+                  onClick={() => this.deleteDestination(this.props.destination.id)}>
             Delete
           </button>
         </td>
@@ -24,12 +29,5 @@ class DestinationItem extends Component {
     );
   }
 }
-
-
-DestinationItem.propTypes =
-  {
-    destination: PropTypes.object,
-    onDelete: PropTypes.func
-  };
 
 export default DestinationItem;

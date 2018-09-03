@@ -1,28 +1,22 @@
 import React, {Component} from 'react';
 import HeaderItem from './Components/Header';
-import CarouselEx from './Components/Carousel';
+import CarouselElement from './Components/Carousel';
 import Destination from './Components/Destination';
 import AddDestination from './Components/AddDestination';
+import FooterItem from './Components/Footer';
 import uuid from 'uuid';
-import {
-  Container,
-  Row,
-  Col
-} from 'reactstrap';
+import {Container, Row, Col} from 'reactstrap';
 import './App.css';
 
-class App extends Component {
-  constructor() {
-    super();
-    this.state = {
-      projects: []
-    }
-  }
 
+class App extends Component {
+  state = {
+    destinations: []
+  };
 
   componentWillMount() {
     this.setState({
-      projects: [
+      destinations: [
         {
           id: uuid.v4(),
           title: 'Indonesia',
@@ -39,21 +33,20 @@ class App extends Component {
           category: 'Europe'
         },
       ]
-
     })
   }
 
-  handleAddProject(project) {
-    //console.log(project);
-    let projects = [project].concat(this.state.projects);
-    this.setState({projects});
+  handleAddDestination = (destination) => {
+    let destinations = [destination, ...this.state.destinations];
+    this.setState({destinations});
   };
 
-  handleDeleteProject(id) {
+  handleDeleteDestination = (id) => {
     this.setState({
-      projects: this.state.projects.filter(item => item.id !== id)
+      destinations: this.state.destinations.filter(item => item.id !== id)
     });
   };
+
   render() {
     return (
       <React.Fragment>
@@ -64,11 +57,16 @@ class App extends Component {
             </Col>
           </Row>
         </Container>
-        <CarouselEx/>
+        <CarouselElement/>
         <Row>
           <Col>
-            <AddDestination addDestination={this.handleAddProject.bind(this)}/>
-            <Destination destinations={this.state.projects} onDelete={this.handleDeleteProject.bind(this)}/>
+            <AddDestination addDestination={this.handleAddDestination}/>
+            <Destination destinations={this.state.destinations} onDelete={this.handleDeleteDestination}/>
+          </Col>
+        </Row>
+        <Row>
+          <Col>
+            <FooterItem/>
           </Col>
         </Row>
       </React.Fragment>

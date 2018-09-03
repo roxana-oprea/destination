@@ -1,12 +1,16 @@
 import React, {Component} from 'react';
 import DestinationItem from './DestinationItem';
 import PropTypes from 'prop-types';
-
 import {Container, Row, Col, Table} from 'reactstrap';
 
 
 class Destination extends Component {
-  deleteDestination(id) {
+  static propTypes = {
+    destinations: PropTypes.array,
+    onDelete: PropTypes.func
+  };
+
+  deleteDestination = (id) => {
     this.props.onDelete(id);
   };
 
@@ -15,7 +19,9 @@ class Destination extends Component {
     if (this.props.destinations) {
       destinationItems = this.props.destinations.map(destination => {
         return (
-          <DestinationItem onDelete={this.deleteDestination.bind(this)} key={destination.id} destination={destination}/>
+          <DestinationItem key={destination.id}
+                           onDelete={this.deleteDestination}
+                           destination={destination}/>
         )
       })
     }
@@ -48,11 +54,5 @@ class Destination extends Component {
     );
   }
 }
-
-Destination.propTypes =
-  {
-    destinations: PropTypes.array,
-    onDelete: PropTypes.func
-  };
 
 export default Destination;
