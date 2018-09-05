@@ -1,15 +1,13 @@
 import React, {Component} from 'react';
-import HeaderItem from './Components/Header';
-import CarouselElement from './Components/Carousel';
-import Destination from './Components/Destination';
-import AddDestination from './Components/AddDestination';
-import FooterItem from './Components/Footer';
+import CarouselElement from './Carousel';
+import Destination from './Destination';
+import AddDestination from './AddDestination';
 import uuid from 'uuid';
 import {Container, Row, Col} from 'reactstrap';
-import './App.css';
+import '../app/App.css';
 
 
-class App extends Component {
+class Home extends Component {
   state = {
     destinations: []
   };
@@ -53,7 +51,6 @@ class App extends Component {
         <Container fluid>
           <Row>
             <Col>
-              <HeaderItem/>
             </Col>
           </Row>
         </Container>
@@ -66,7 +63,6 @@ class App extends Component {
         </Row>
         <Row>
           <Col>
-            <FooterItem/>
           </Col>
         </Row>
       </React.Fragment>
@@ -74,4 +70,6 @@ class App extends Component {
   }
 }
 
-export default App;
+export default Home;
+
+

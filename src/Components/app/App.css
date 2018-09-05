@@ -42,6 +42,10 @@ hr {
   flex: 3;
 }
 
+.flex-nav li a:not(.active) {
+  border-bottom: 1px solid transparent;
+}
+
 .flex-nav li a.active {
   border-bottom: 1px solid #ff2457;
 }

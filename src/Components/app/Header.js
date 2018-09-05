@@ -1,16 +1,17 @@
 import React from 'react';
 import {Nav, NavItem, NavLink, Button} from 'reactstrap';
-import logo from '../logo.png';
+import {NavLink as RouterLink} from 'react-router-dom';
+import logo from './logo.png';
 
 const HeaderItem = () => (
   <div className="wrapper">
     <img src={logo} className="logo-image" alt="Logo"/>
     <Nav className="flex-nav">
       <NavItem>
-        <NavLink active href="#">Home</NavLink>
+        <NavLink tag={RouterLink} to="/" exact>Home</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink href="#">Rooms</NavLink>
+        <NavLink tag={RouterLink} to="/about">About</NavLink>
       </NavItem>
       <NavItem>
         <NavLink href="#">Blog</NavLink>

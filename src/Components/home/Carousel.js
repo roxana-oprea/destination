@@ -1,8 +1,8 @@
 import React, {Component} from 'react';
 import {Carousel, CarouselItem, CarouselControl, CarouselIndicators, CarouselCaption} from 'reactstrap';
-import image1 from './images/front1.jpg';
-import image2 from './images/front2.jpg';
-import image3 from './images/front3.jpg';
+import image1 from '../images/front1.jpg';
+import image2 from '../images/front2.jpg';
+import image3 from '../images/front3.jpg';
 
 const items = [
   {
