@@ -46,13 +46,13 @@ const MainItem = () => {
     <div>
       <div className="card-deck p-5">
         <div className="card">
-          <img className="card-img-top" src={image1} alt="Card image cap"/>
+          <img className="card-img-top img-hover" src={image1} alt="Card image cap"/>
         </div>
         <div className="card">
-          <img className="card-img-top" src={image2} alt="Card image cap"/>
+          <img className="card-img-top img-hover" src={image2} alt="Card image cap"/>
         </div>
         <div className="card">
-          <img className="card-img-top" src={image3} alt="Card image cap"/>
+          <img className="card-img-top img-hover" src={image3} alt="Card image cap"/>
         </div>
       </div>
     </div>

@@ -24,3 +24,11 @@
 .card-bg {
   background-color: #272f44;
 }
+
+.img-hover {
+  transition: transform .4s ease-in-out;
+}
+
+.img-hover:hover {
+  transform: scale(1.1);
+}
