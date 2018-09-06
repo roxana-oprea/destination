@@ -1,0 +1,26 @@
+.jumbotron {
+  background-color: #272f44;
+}
+
+.cards-items {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.card-item {
+  width: 250px;
+  height: 250px;
+  border: 1px solid #b3163a;
+  border-radius: 50%;
+}
+
+.title-item {
+  color: #b3163a;
+}
+
+.card-bg {
+  background-color: #272f44;
+}
