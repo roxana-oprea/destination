@@ -14,7 +14,7 @@ const HeaderItem = () => (
         <NavLink tag={RouterLink} to="/about">About</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink href="#">Blog</NavLink>
+        <NavLink tag={RouterLink} to="/blog">Blog</NavLink>
       </NavItem>
       <NavItem>
         <NavLink href="#">Features</NavLink>

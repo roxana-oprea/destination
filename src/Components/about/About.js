@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import {Container, Row, Col, Jumbotron} from 'reactstrap';
+import {Container, Row, Col} from 'reactstrap';
 import './About.css';
 import image1 from '../images/img-1.jpg';
 import image2 from '../images/img-2.jpg';
@@ -9,11 +9,10 @@ import image3 from '../images/img-3.jpg';
 const JunbotronItem = () => {
   return (
     <div className="p-5">
-      <h1 className="display-4">WELCOME</h1>
+      <h1 className="display-4">Welcome, we can plan your next destination.</h1>
       <p className="lead">At Destinations, our passion is to connect our guests to the very best of our destinations.
         From the beaches of Hawaii and Bermuda to the deserts of the United Arab Emirates or to the heart of London, we
-        offer
-        extraordinary places. Add great service, and the result is an unforgettable guest experience.</p>
+        offer extraordinary places. Add great service, and the result is an unforgettable guest experience.</p>
       <hr className="my-2"/>
       <p>Make Destinations your personal gateway to exploring the world’s most extraordinary places and to having your
         most memorable experiences.
