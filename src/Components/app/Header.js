@@ -17,13 +17,13 @@ const HeaderItem = () => (
         <NavLink tag={RouterLink} to="/blog">Blog</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink href="#">Features</NavLink>
+        <NavLink tag={RouterLink} to="/gallery">Events</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink href="#">Events</NavLink>
+        <NavLink href="#">Contact</NavLink>
       </NavItem>
       <NavItem className="d-none d-xl-none">
-        <NavLink href="#">Events</NavLink>
+        <NavLink href="#">Contact</NavLink>
       </NavItem>
     </Nav>
     <Button className="sign-in-button">Sign In</Button>
