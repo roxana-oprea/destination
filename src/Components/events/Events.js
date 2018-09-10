@@ -12,17 +12,20 @@ import './Events.css';
 import image1 from '../images/img-7.jpg';
 import image2 from '../images/img-8.jpg';
 import image3 from '../images/img-9.jpg';
+import image4 from '../images/img-10.jpg';
 
 const items1 = [
   {id: 1, title: 'Pool Party', src: image1, date: '10 September - 2018'},
   {id: 2, title: 'Music Party', src: image2, date: '19 September - 2018'},
   {id: 3, title: 'Wedding J & C', src: image3, date: '25 September - 2018'},
+  {id: 4, title: 'BBQ & Beer', src: image4, date: '29 September - 2018'},
 ];
 
 const items2 = [
   {id: 1, title: 'Pool Party', src: image1, date: '10 October - 2018'},
   {id: 2, title: 'Music Party', src: image2, date: '19 October - 2018'},
   {id: 3, title: 'Wedding J & C', src: image3, date: '25 October - 2018'},
+  {id: 4, title: 'BBQ & Beer', src: image4, date: '29 October - 2018'},
 ];
 
 
@@ -30,8 +33,8 @@ const CardItem = ({title, src, date}) => {
   return (
     <Card body className="card-bg">
       <CardImg top width="100%" src={src}/>
-      <CardTitle className="p-3">{title}</CardTitle>
-      <CardText className="date">{date}</CardText>
+      <h1 className="p-3 h-2">{title}</h1>
+      <CardText className="p-3 date">{date}</CardText>
       <CardBody>
         Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
         industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type
@@ -93,7 +96,7 @@ class CenteredNav extends Component {
                 <Row>
                   {items1.map(({id, title, src, date}) => {
                     return (
-                      <Col sm="4" key={id}>
+                      <Col sm="6" key={id}>
                         <CardItem title={title} src={src} date={date}/>
                       </Col>
                     )
@@ -106,7 +109,7 @@ class CenteredNav extends Component {
                 <Row>
                   {items2.map(({id, title, src, date}) => {
                     return (
-                      <Col sm="4" key={id}>
+                      <Col sm="6" key={id}>
                         <CardItem title={title} src={src} date={date}/>
                       </Col>
                     )
@@ -138,7 +141,7 @@ class Events extends Component {
   render() {
     return (
       <React.Fragment>
-        <Container fluid>
+        <Container>
           <Row>
             <Col>
               <CenteredNav/>
@@ -146,12 +149,10 @@ class Events extends Component {
           </Row>
           <Row>
             <Col>
-
             </Col>
           </Row>
           <Row>
             <Col>
-
             </Col>
           </Row>
         </Container>

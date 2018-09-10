@@ -62,7 +62,7 @@ class About extends Component {
   render() {
     return (
       <React.Fragment>
-        <Container fluid>
+        <Container>
           <Row>
             <Col>
               <JunbotronItem/>

@@ -20,7 +20,7 @@ const HeaderItem = () => (
         <NavLink tag={RouterLink} to="/gallery">Events</NavLink>
       </NavItem>
       <NavItem>
-        <NavLink href="#">Contact</NavLink>
+        <NavLink tag={RouterLink} to="/contact">Contact</NavLink>
       </NavItem>
       <NavItem className="d-none d-xl-none">
         <NavLink href="#">Contact</NavLink>
