@@ -1,6 +1,6 @@
 import React, {Component} from 'react';
 import {
-  Container, Row, CardBody, CardImg, Card, CardTitle, CardText,
+  Container, Row, CardBody, CardImg, Card, CardText,
   Col,
   Nav,
   NavItem,
@@ -17,13 +17,9 @@ import image4 from '../images/img-10.jpg';
 const items1 = [
   {id: 1, title: 'Pool Party', src: image1, date: '10 September - 2018'},
   {id: 2, title: 'Music Party', src: image2, date: '19 September - 2018'},
-  {id: 3, title: 'Wedding J & C', src: image3, date: '25 September - 2018'},
-  {id: 4, title: 'BBQ & Beer', src: image4, date: '29 September - 2018'},
 ];
 
 const items2 = [
-  {id: 1, title: 'Pool Party', src: image1, date: '10 October - 2018'},
-  {id: 2, title: 'Music Party', src: image2, date: '19 October - 2018'},
   {id: 3, title: 'Wedding J & C', src: image3, date: '25 October - 2018'},
   {id: 4, title: 'BBQ & Beer', src: image4, date: '29 October - 2018'},
 ];
