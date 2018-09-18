@@ -24,15 +24,15 @@ const JunbotronItem = () => {
 const SectionItem = () => {
   return (
     <div className="cards-items p-5">
-      <div className="card-item d-flex flex-column justify-content-center align-items-center">
+      <div className="card-item d-flex flex-column justify-content-center align-items-center mb-2">
         <div className="display-4"><strong>200</strong></div>
         <h3 className="title-item">Hotels</h3>
       </div>
-      <div className="card-item d-flex flex-column justify-content-center align-items-center">
+      <div className="card-item d-flex flex-column justify-content-center align-items-center mb-2">
         <div className="display-4"><strong>250</strong></div>
         <h3 className="title-item">Restaurants</h3>
       </div>
-      <div className="card-item d-flex flex-column justify-content-center align-items-center">
+      <div className="card-item d-flex flex-column justify-content-center align-items-center mb-2">
         <div className="display-4"><strong>450</strong></div>
         <h3 className="title-item">Destinations</h3>
       </div>

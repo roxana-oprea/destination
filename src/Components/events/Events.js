@@ -70,19 +70,19 @@ class CenteredNav extends Component {
             <NavItem>
               <NavLink href="#" data-tab="1" onClick={this.toggle}
                        className={{active: this.state.activeTab === '1'}}>
-                Happening
+                <span className="p-4">Happening</span>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="#" data-tab="2" onClick={this.toggle}
                        className={{active: this.state.activeTab === '2'}}>
-                Upcoming
+                <span className="p-4">Upcoming</span>
               </NavLink>
             </NavItem>
             <NavItem>
               <NavLink href="#" data-tab="3" onClick={this.toggle}
                        className={{active: this.state.activeTab === '3'}}>
-                Expired
+                <span className="p-4">Expired</span>
               </NavLink>
             </NavItem>
           </Nav>
