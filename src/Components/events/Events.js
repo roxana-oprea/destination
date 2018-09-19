@@ -66,7 +66,7 @@ class CenteredNav extends Component {
     return (
       <div>
         <div>
-          <Nav className="mb-3 justify-content-center">
+          <Nav className="mb-3 justify-content-around">
             <NavItem>
               <NavLink href="#" data-tab="1" onClick={this.toggle}
                        className={{active: this.state.activeTab === '1'}}>

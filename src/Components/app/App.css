@@ -112,6 +112,7 @@ hr {
   position: absolute;
   left: 45px;
   top: 45px;
+  width: 150px;
 }
 
 @media all and (min-width: 1200px) {
@@ -124,8 +125,8 @@ hr {
 
   .logo-image {
     position: absolute;
-    left: -24px;
-    top: 45px;
+    left: 10px;
+    top: 60px;
   }
 }
 
